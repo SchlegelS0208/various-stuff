@@ -125,13 +125,14 @@ def run(args):
                     for k in attrs
                 }
                 ldap_attrs = attrs
-        if ldap_attrs['lastLogon']:
+
+        if 'lastLogon' in ldap_attrs:
             ldap_attrs['lastLogon'] = convert_epoch(ldap_attrs['lastLogon'])
         
-        if ldap_attrs['pwdLastSet']:
+        if 'pwdLastSet' in ldap_attrs:
             ldap_attrs['pwdLastSet'] = convert_epoch(ldap_attrs['pwdLastSet'])
         
-        if ldap_attrs['lastLogonTimestamp']:
+        if 'lastLogonTimestamp' in ldap_attrs:
             ldap_attrs['lastLogonTimestamp'] = convert_epoch(ldap_attrs['lastLogonTimestamp'])
      
         #print(ldap_attrs)
