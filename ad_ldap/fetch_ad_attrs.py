@@ -28,6 +28,8 @@ LDAP_PROTO = 'ldaps'
 LDAP_PORT = 636
 LDAP_SCOPE = ldap.SCOPE_SUBTREE
 
+global ldap_attrs
+
 def get_login():
     user_prompt = input('Username: ')  
     pass_prompt = lambda: (getpass.getpass('Password: '))
@@ -112,6 +114,7 @@ def query_x509(args):
         return result
 
 def run(args):
+    ldap_attrs = ""
     return_status = STATUS_OK
     ldap_data = query_x509(args)
     #print(ldap_data)
