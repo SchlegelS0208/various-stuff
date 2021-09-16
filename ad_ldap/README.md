@@ -18,7 +18,7 @@ $ sudo mv cacert.pem /etc/ldap/cacert.pem
 ### Step 3: create a valid ldap.conf for TLS connections
 
 ```
-$ cat << EOF > /etc/ldap/ldap.conf
+$ sudo cat << EOF > /etc/ldap/ldap.conf
 TLS_CACERT      /etc/ldap/cacert.pem
 TLS_REQCERT     allow
 EOF
