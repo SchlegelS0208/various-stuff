@@ -187,5 +187,6 @@ if __name__ == '__main__':
     except Exception as ex:
         print('%s: Unhandled exception %s' % (sys.argv[0], type(ex)))
         print(ex)
+        print('bla')
         traceback.print_exc()
         sys.exit(STATUS_CRITICAL)
