@@ -2,6 +2,8 @@
 
 ## Requirements
 
+* yum package: python3-ldap
+
 ### Step 1: dump TLS certs with chain into cacert.pem (from your LDAPS/AD server)
 
 ```
